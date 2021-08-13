@@ -5,11 +5,11 @@ services:
     build:
       context: '.'
       args:
-        uid: ${UID}
+        uid: ${UID:-1000}
     container_name: hype_task
     environment:
-      - APACHE_RUN_USER=#${UID}
-      - APACHE_RUN_GROUP=#${UID}
+      - APACHE_RUN_USER=#${UID:-1000}
+      - APACHE_RUN_GROUP=#${UID:-1000}
     volumes:
       - type: bind
         source: .

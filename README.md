@@ -16,12 +16,13 @@ Install docker compose
 
 ## Run App
 
- ```bash
-docker-compose up --build
- ```
 
  ```bash
 Copy .env.example file into .env file
+ ```
+
+ ```bash
+docker-compose up --build
  ```
 
 ## Run Project
