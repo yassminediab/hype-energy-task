@@ -10,10 +10,10 @@ class DB {
 
 		if(empty(self::$instance)) {
 			$db_info = array(
-				"db_host" => getenv('DB_HOST') ?? 'localhost',
+				"db_host" => getenv('DB_HOST') ?? 'hype-mysql-db',
 				"db_port" => getenv('DB_PORT') ?? '3306',
 				"db_user" => getenv('DB_USERNAME') ?? 'root',
-				"db_pass" => getenv('DB_PASSWORD') ?? '',
+				"db_pass" => getenv('DB_PASSWORD') ?? 'password',
 				"db_name" => getenv('DB_DATABASE') ?? 'hype_energy',
 				"db_charset" => "UTF-8");
 

@@ -20,6 +20,10 @@ Install docker compose
 docker-compose up --build
  ```
 
+ ```bash
+Copy .env.example file into .env file
+ ```
+
 ## Run Project
   ```
  localhost:8000
