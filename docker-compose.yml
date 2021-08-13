@@ -1,0 +1,59 @@
+version: '3.5'
+
+services:
+  hype_task:
+    build:
+      context: '.'
+      args:
+        uid: ${UID}
+    container_name: hype_task
+    environment:
+      - APACHE_RUN_USER=#${UID}
+      - APACHE_RUN_GROUP=#${UID}
+    volumes:
+      - type: bind
+        source: .
+        target: /var/www/html
+    ports:
+      - 8000:80
+    links:
+      - hype-mysql-db
+    networks:
+      backend:
+        aliases:
+          - hype_task
+
+  hype-mysql-db:
+    image: mysql
+    container_name: hype-mysql-db
+    restart: always
+    ports:
+      - 3307:3306
+    volumes:
+      - ./dump:/docker-entrypoint-initdb.d/
+      - ./run/var:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_DATABASE=hype_energy
+    networks:
+      backend:
+        aliases:
+          - hype-db
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    links:
+      - hype-mysql-db
+    environment:
+      PMA_HOST: hype-mysql-db
+      PMA_PORT: 3306
+    ports:
+      - '8080:80'
+    networks:
+      backend:
+        aliases:
+          - phpmyadmin
+
+networks:
+  backend:
+    name: hype-network

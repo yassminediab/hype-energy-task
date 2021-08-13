@@ -1,0 +1,138 @@
+* {
+  	box-sizing: border-box;
+  	font-family: -apple-system, BlinkMacSystemFont, "segoe ui", roboto, oxygen, ubuntu, cantarell, "fira sans", "droid sans", "helvetica neue", Arial, sans-serif;
+  	font-size: 16px;
+  	-webkit-font-smoothing: antialiased;
+  	-moz-osx-font-smoothing: grayscale;
+}
+body {
+  	background-color: #435165;
+  	margin: 0;
+}
+.register {
+  	width: 400px;
+  	background-color: #ffffff;
+  	box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.3);
+  	margin: 100px auto;
+}
+.register h1 {
+  	text-align: center;
+  	color: #5b6574;
+  	font-size: 24px;
+  	padding: 20px 0 20px 0;
+  	border-bottom: 1px solid #dee0e4;
+}
+.register form {
+  	display: flex;
+  	flex-wrap: wrap;
+  	justify-content: center;
+  	padding-top: 20px;
+}
+.register form label {
+  	display: flex;
+  	justify-content: center;
+  	align-items: center;
+  	width: 50px;
+ 	height: 50px;
+  	background-color: #3274d6;
+  	color: #ffffff;
+}
+.register form input[type="password"], .register form input[type="text"], .register form input[type="email"] {
+  	width: 310px;
+  	height: 50px;
+  	border: 1px solid #dee0e4;
+  	margin-bottom: 20px;
+  	padding: 0 15px;
+}
+.register form input[type="submit"] {
+  	width: 100%;
+  	padding: 15px;
+  	margin-top: 20px;
+  	background-color: #3274d6;
+ 	border: 0;
+  	cursor: pointer;
+  	font-weight: bold;
+  	color: #ffffff;
+  	transition: background-color 0.2s;
+}
+.register form input[type="submit"]:hover {
+	background-color: #2868c7;
+  	transition: background-color 0.2s;
+}
+body{margin-top:20px;}
+
+
+/* USER LIST TABLE */
+.user-list tbody td > img {
+	position: relative;
+	max-width: 50px;
+	float: left;
+	margin-right: 15px;
+}
+.user-list tbody td .user-link {
+	display: block;
+	font-size: 1.25em;
+	padding-top: 3px;
+	margin-left: 60px;
+}
+.user-list tbody td .user-subhead {
+	font-size: 0.875em;
+	font-style: italic;
+}
+
+/* TABLES */
+.table {
+	border-collapse: separate;
+}
+.table-hover > tbody > tr:hover > td,
+.table-hover > tbody > tr:hover > th {
+	background-color: #eee;
+}
+.table thead > tr > th {
+	border-bottom: 1px solid #C2C2C2;
+	padding-bottom: 0;
+}
+.table tbody > tr > td {
+	font-size: 0.875em;
+	background: #f5f5f5;
+	border-top: 10px solid #fff;
+	vertical-align: middle;
+	padding: 12px 8px;
+}
+.table tbody > tr > td:first-child,
+.table thead > tr > th:first-child {
+	padding-left: 20px;
+}
+.table thead > tr > th span {
+	border-bottom: 2px solid #C2C2C2;
+	display: inline-block;
+	padding: 0 5px;
+	padding-bottom: 5px;
+	font-weight: normal;
+}
+.table thead > tr > th > a span {
+	color: #344644;
+}
+.table thead > tr > th > a span:after {
+	content: "\f0dc";
+	font-family: FontAwesome;
+	font-style: normal;
+	font-weight: bold;
+	text-decoration: inherit;
+	margin-left: 5px;
+	font-size: 0.75em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
